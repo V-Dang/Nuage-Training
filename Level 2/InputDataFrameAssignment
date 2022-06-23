@@ -1,0 +1,16 @@
+import numpy as np
+import pandas as pd
+
+print('Please enter your name:')
+name = input()
+
+print(f'Hello {name}. Please enter your age:')
+age = input()
+
+data={'Name': name, 'Age':age}
+
+df = pd.DataFrame()
+df = df.append(data, ignore_index=True)
+df.to_csv('MyFirstDataFrame.csv', mode='a')
+
+print(df)
